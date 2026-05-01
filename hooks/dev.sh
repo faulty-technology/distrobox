@@ -15,3 +15,5 @@ apt-get install -y code helm dotnet-sdk-10.0
 install_nvim
 install_kubectl
 install_minikube
+install_pulumi
+install_opentofu

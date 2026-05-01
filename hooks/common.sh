@@ -52,6 +52,20 @@ install_pulumi() {
     curl -fsSL https://get.pulumi.com | sh
 }
 
+install_opentofu() {
+    # Download the installer script:
+    curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh
+
+    # Give it execution permissions:
+    chmod +x install-opentofu.sh
+
+    # Run the installer:
+    ./install-opentofu.sh --install-method deb
+
+    # Remove the installer:
+    rm -f install-opentofu.sh
+}
+
 install_godot() {
     # Download and install Godot .NET
     wget -qO /tmp/godot.zip \
